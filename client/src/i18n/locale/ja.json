@@ -1,0 +1,33 @@
+{
+  "cake_shop": {
+    "header_text_one": "Personalized and",
+    "header_text_two": "Quality Cakes",
+    "main_text": "Our Popular Cakes",
+    "mississippi": "Mississippi Mud Pie",
+    "red_velvet": "Red Velvet Cake",
+    "dark_forest": "Dark Forest Cake",
+    "rainbow": "Rainbow Cake",
+    "lemon": "Lemon Yoghurt Cake",
+    "pineapple": "Pineapple Cake",
+    "banana": "Banana Pudding Cake",
+    "carrot": "Carrot Cake",
+    "choco": "Choco Vanilla Cake",
+    "chocochip": "Chocolate Chip Cake",
+    "orange": "Tropilicious Orange Cake",
+    "butterscotch": "Butterscotch Cake",
+    "footer": "© Mune Cake Shop - All rights reserverd 2020",
+    "shopping_cart": "Shopping Cart",
+    "review_order": "Review Order",
+    "sub_total": "Sub Total",
+    "delivery": "Delivery charges",
+    "total": "Total Amount",
+    "pay": "Pay with PayPay",
+    "pay_click": "On click you will be directed to PayPay site",
+    "home": "Home",
+    "order_success": "Order Success",
+    "total_amount": "Total Amount Paid",
+    "merchant": "MERCHANT ORDER ID : ",
+    "": " : ",
+    "paymentmode": "PAYMENT MODE : "
+  }
+}

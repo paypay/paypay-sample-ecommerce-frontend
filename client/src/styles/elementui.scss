@@ -1,0 +1,20 @@
+@import "./variables";
+@import "./mixins";
+
+.popup {
+  .el-dialog {
+    width: 500px;
+      .el-dialog__header {
+          text-align: center;
+          padding: 20px;
+          // border-bottom: 1px solid $silver;
+          .el-dialog__headerbtn {
+            display: none;
+          }
+      }
+      .el-dialog__body {
+        padding: 20px 60px;
+        text-align: center;
+      }
+  }
+}

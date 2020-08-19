@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  outline: none;
+  font-family: "HiraKakuPro-W3";
+
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+#app {
+  height: 100%;
+}
+
+:focus {
+  outline: none;
+}
