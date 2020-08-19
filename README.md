@@ -1,5 +1,7 @@
 # PayPay Sample Web application
 
+[![License](https://img.shields.io/:license-apache2.0-red.svg)](https://opensource.org/licenses/Apache-2.0)
+
 A simple and functional E-Commerce site developed in VueJS to demonstrate PayPay's different language SDK's implementations.
 
 Key features:
@@ -44,3 +46,29 @@ License
 ----
 
 Apache 2.0
+
+### Cloud deployment
+
+Additionally to trying out this application locally, you can deploy it to a variety of host services. Here is a small selection of them.
+
+| [Zeit](https://zeit.co/)                        | [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/paypay/paypay-sample-ecommerce/tree/master) |
+| ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Heroku](https://www.heroku.com/deploy/?template=https://github.com/paypay/paypay-sample-ecommerce/tree/master) | [![Deploy with Heroku](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy/?template=https://github.com/paypay/paypay-sample-ecommerce/tree/master)      |
+
+
+License
+=======
+
+    Copyright 2020 PayPay
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
