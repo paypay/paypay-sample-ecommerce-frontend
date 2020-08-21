@@ -1,5 +1,6 @@
 # PayPay Sample Web application
 
+
 [![License](https://img.shields.io/:license-apache2.0-red.svg)](https://opensource.org/licenses/Apache-2.0)
 
 A simple and functional E-Commerce site developed in VueJS to demonstrate PayPay's different language SDK's implementations.
