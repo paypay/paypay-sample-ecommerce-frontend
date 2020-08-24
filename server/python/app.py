@@ -1,5 +1,5 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask import Flask, render_template, request, jsonify, make_response
+from flask_cors import CORS, cross_origin
 
 import paypayopa
 import polling
@@ -17,11 +17,7 @@ if not API_KEY:
 if not API_SECRET:
     raise ValueError("No API_SECRET set for Flask application")
 
-client = paypayopa.Client(
-    auth=(API_KEY, API_SECRET),
-    production_mode=False)  # Set True for Production Environment. By Default this is set False for Sandbox Environment
-
-client.set_assume_merchant("MUNE_CAKE_SHOP")
+client = paypayopa.Client(auth=(API_KEY, API_SECRET))
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -91,60 +87,58 @@ CAKES = [
     },
 ]
 
-
 @app.route('/', methods=['GET', 'OPTIONS'])
 def index():
-    return jsonify(apiStatus="running")
-
+	return jsonify(apiStatus="running")
 
 # sanity check route
 @app.route('/cakes', methods=['GET', 'OPTIONS'])
 def get_cakes():
     return jsonify(CAKES)
 
-
 @app.route('/create-qr', methods=['POST'])
 def creat_qr():
-    req = request.json
-    print(req)
-    client = paypayopa.Client(auth=(API_KEY, API_SECRET))
-    merchant_payment_id = uuid.uuid4().hex
-    payment_details = {
-        "merchantPaymentId": merchant_payment_id,
-        "codeType": "ORDER_QR",
-        "orderItems": req["orderItems"],
-        "amount": req["amount"],
-        "redirectUrl": "{}/{}".format(FRONTEND_PATH, merchant_payment_id),
-        "redirectType": "WEB_LINK",
-    }
-    resp = client.code.create_qr_code(data=payment_details)
-    return json.dumps(resp)
+        req = request.json
+        print(req)
+        client = paypayopa.Client(auth=(API_KEY, API_SECRET))
+        merchant_payment_id = uuid.uuid4().hex
+        payment_details = {
+            "merchantPaymentId": merchant_payment_id,
+            "codeType": "ORDER_QR",
+            "orderItems": req["orderItems"],
+            "amount": req["amount"],
+            "redirectUrl": "{}/{}".format(FRONTEND_PATH, merchant_payment_id),
+            "redirectType": "WEB_LINK",
+        }
+        resp = client.code.create_qr_code(data=payment_details)
+        return json.dumps(resp)
 
 
 def is_correct_response(resp):
-    print(resp)
-    return resp
+        print(resp)
+        return resp
 
 
 def fetch_payment_details(merchant_id):
-    resp = client.code.get_payment_details(merchant_id)
-    if (resp['data'] == 'None'):
-        return {
-            'error': 'true'
-        }
-    return resp['data']['status']
+            resp = client.code.get_payment_details(merchant_id)
+            if(resp['data'] == 'None'):
+                return {
+                    'error': 'true'
+                }
+            return resp['data']['status']
 
 
 @app.route('/order-status/<merch_id>', methods=['GET', 'OPTIONS'])
 def order_status(merch_id):
-    print(merch_id)
-    polling.poll(
-        lambda: fetch_payment_details(merch_id) == 'COMPLETED' or fetch_payment_details(merch_id) == 'FAILED',
-        check_success=is_correct_response,
-        step=2,
-        timeout=240)
-    return client.code.get_payment_details(merch_id)
+        print(merch_id)
+        polling.poll(
+            lambda: fetch_payment_details(merch_id) == 'COMPLETED' or fetch_payment_details(merch_id) == 'FAILED',
+            check_success=is_correct_response,
+            step=2,
+            timeout=240)
+        return client.code.get_payment_details(merch_id)
 
 
 if __name__ == '__main__':
-    app.run(debug=_DEBUG)
+        raise Exception()
+        app.run(debug=_DEBUG)
