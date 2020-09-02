@@ -15,7 +15,7 @@ updates:
     schedule:
       interval: "daily"
 
-   - package-ecosystem: "composer" # See documentation for possible values
+  - package-ecosystem: "composer" # See documentation for possible values
     directory: "server/php/composer.lock" # Location of package manifests
     schedule:
       interval: "daily"
