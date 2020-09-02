@@ -42,9 +42,9 @@ function load_route($client)
 
 
 $client = new Client([
-    'API_KEY' => 'DEVELOPER_KEY',
-    'API_SECRET'=>'DEVELOPER_SECRET',
-    'MERCHANT_ID'=>'MERCHANT_ID'
+    'API_KEY' => getenv('API_KEY'),
+    'API_SECRET'=> getenv('API_SECRET'),
+    'MERCHANT_ID'=>getenv('MERCHID')
 ],
 false//set to true for production mode
 );
