@@ -1,6 +1,6 @@
-# Python SDK Implementation
+# PHP SDK Implementation
 
-This is a python based implementation of PayPay's SDK. For the demonstration purpose we have used a simple Flask server with polling library to create QR code link and to check the order status of a QR code
+This is a PHP based implementation of PayPay's SDK. For the demonstration purpose we have used a simple Flask server with polling library to create QR code link and to check the order status of a QR code
 
 ### Install Requirements
 
