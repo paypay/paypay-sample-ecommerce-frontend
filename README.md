@@ -2,6 +2,9 @@
 
 
 [![License](https://img.shields.io/:license-apache2.0-red.svg)](https://opensource.org/licenses/Apache-2.0)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpaypay%2Fpaypay-sample-ecommerce.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpaypay%2Fpaypay-sample-ecommerce?ref=badge_shield)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=paypay_paypay-sample-ecommerce&metric=alert_status)](https://sonarcloud.io/dashboard?id=paypay_paypay-sample-ecommerce)
+
 
 A simple and functional E-Commerce site developed in VueJS to demonstrate PayPay's different language SDK's implementations.
 
@@ -73,3 +76,6 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpaypay%2Fpaypay-sample-ecommerce.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpaypay%2Fpaypay-sample-ecommerce?ref=badge_large)
