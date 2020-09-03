@@ -8,20 +8,14 @@ This is a PHP based implementation of PayPay's SDK. For the demonstration purpos
 $ cd server/php
 $ composer install
 ```
-
 ### Add API Keys to environment
 
-Open index.php and modify the block with your own values
-
-```php
-$client = new Client([
-    'API_KEY' => '<ADD_DEVELOPER_KEY>',
-    'API_SECRET'=>'<ADD_DEVELOPER_SECRET>',
-    'MERCHANT_ID'=>'<ADD_MERCHANT_ID>'
-],
-false//set to true for production mode
-);
+```sh
+$ export API_KEY="REPLACE_WITH_YOUR_API_KEY"
+$ export API_SECRET="REPLACE_WITH_YOUR_SECRET_KEY" 
+$ export MERCHID="REPLACE_WITH_YOUR_MERCHANT_ID"
 ```
+
 
 ### Run local PHP server
 ```sh
