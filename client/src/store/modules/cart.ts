@@ -66,7 +66,7 @@ export const actions:CartAction = {
                 "currency": "JPY"
             }
         }).then(res=>{
-           if(res.statusText==="OK"){
+           if(res.statusText==="OK" || res.status == 200){
                location.href = res.data.data.url
            }
         })
