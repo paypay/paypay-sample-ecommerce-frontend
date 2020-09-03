@@ -13,15 +13,17 @@ $payload->setAmount($req['amount']);
 $orderItems = [];
 foreach ($req['orderItems'] as $key => $item) {
     $incomingItem = (new OrderItem())->setName($item['name'])->setQuantity($item['quantity'])->setUnitPrice($item['unitPrice']);
-    if (isset($item['productId']))
+    if (isset($item['productId'])) {
         $incomingItem->setProductId("${item['productId']}");
-    if (isset($item['category']))
+    }
+    if (isset($item['category'])) {
         $incomingItem->setCategory($item['category']);
+    }
     $orderItems[] = $incomingItem;
 }
-$mpid=$payload->getMerchantPaymentId();
+$mpid = $payload->getMerchantPaymentId();
 $payload->setOrderItems($orderItems)->setRequestedAt();
-$payload->setRedirectType('WEB_LINK')->setRedirectUrl($_SERVER["HTTP_ORIGIN"]."/orderpayment/$mpid");
+$payload->setRedirectType('WEB_LINK')->setRedirectUrl($_SERVER["HTTP_ORIGIN"] . "/orderpayment/$mpid");
 try {
     $resp = $client->code->createQRCode($payload);
     header('Content-Type: application/json');

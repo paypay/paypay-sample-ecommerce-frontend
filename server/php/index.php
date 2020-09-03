@@ -24,7 +24,7 @@ function site_url($echome = false)
     $host = $appConfig['hostname'];
     $host = htmlspecialchars($host);
     if ($echome) {
-        echo ($host . '/');
+        echo $host . '/';
     }
     return ('http://' . $host . '/');
 }
