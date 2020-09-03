@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "c9501866-9054-4eb4-a684-e55e5f1233e4",
+		"name": "munecake",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create-qr",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"orderItems\": [{\n        \"name\": \"Moon cake\",\n        \"category\": \"pastries\",\n        \"quantity\": 1,\n        \"productId\": \"67678\",\n        \"unitPrice\": {\n            \"amount\": 11,\n            \"currency\": \"JPY\"\n        }\n    }],\n    \"amount\": {\n        \"amount\": 11,\n        \"currency\": \"JPY\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/create-qr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"create-qr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order-status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/order-status/f49d6d6bf219464794bdeb34e660e1ab",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"order-status",
+						"f49d6d6bf219464794bdeb34e660e1ab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cakes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/cakes",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cakes"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

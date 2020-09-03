@@ -2,5 +2,5 @@ Flask==1.1.2
 Flask-Cors==3.0.9
 paypayopa>=0.4.2
 polling==0.3.1
-requests==2.22.0
+requests==2.24.0
 uuid==1.30
