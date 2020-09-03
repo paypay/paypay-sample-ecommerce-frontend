@@ -10,7 +10,6 @@ import jp.ne.paypay.sample.model.Item;
 import jp.ne.paypay.sample.model.QrCodeRequest;
 import jp.ne.paypay.sample.services.SampleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,12 +26,9 @@ import java.util.List;
 public class SampleController {
 
     @Autowired
-    private Environment env;
-
-    @Autowired
     private SampleService sampleService;
 
-    private ApiClient apiClient = new Configuration().getDefaultApiClient();
+    private final ApiClient apiClient = new Configuration().getDefaultApiClient();
 
     @GetMapping("/cakes")
     @ResponseBody
