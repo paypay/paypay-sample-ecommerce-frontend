@@ -1,0 +1,66 @@
+<?php
+$cakes = [
+    [
+        "title"=> "cake_shop.mississippi",
+        "id"=> 1,
+        "price"=> 120,
+        "image"=> "darkforest.png"
+    ], [
+        "title"=> "cake_shop.red_velvet",
+        "id"=> 2,
+        "price"=> 190,
+        "image"=> "redvelvet.png"
+    ], [
+        "title"=> "cake_shop.dark_forest",
+        "id"=> 3,
+        "price"=> 100,
+        "image"=> "darkforestcake.png"
+    ], [
+        "title"=> "cake_shop.rainbow",
+        "id"=> 4,
+        "price"=> 200,
+        "image"=> 'rainbow.png'
+    ], [
+        "title"=> "cake_shop.lemon",
+        "id"=> 5,
+        "price"=> 80,
+        "image"=> 'lemon.png'
+    ], [
+        "title"=> "cake_shop.pineapple",
+        "id"=> 6,
+        "price"=> 110,
+        "image"=> 'pineapple.png'
+    ], [
+        "title"=> "cake_shop.banana",
+        "id"=> 7,
+        "price"=> 90,
+        "image"=> 'banana.png'
+    ], [
+        "title"=> "cake_shop.carrot",
+        "id"=> 8,
+        "price"=> 165,
+        "image"=> 'carrot.png'
+    ], [
+        "title"=> "cake_shop.choco",
+        "id"=> 9,
+        "price"=> 77,
+        "image"=> 'choco.png'
+    ], [
+        "title"=> "cake_shop.chocochip",
+        "id"=> 10,
+        "price"=> 130,
+        "image"=> 'chocochip.png'
+    ], [
+        "title"=> "cake_shop.orange",
+        "id"=> 11,
+        "price"=> 140,
+        "image"=> 'orange.png'
+    ], [
+        "title"=> "cake_shop.butterscotch",
+        "id"=> 12,
+        "price"=> 155,
+        "image"=> 'butterscotch.png'
+    ],
+];
+header('Content-Type: application/json');
+echo json_encode($cakes);
