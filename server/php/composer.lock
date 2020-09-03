@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a89c678c7430fc29a95e4708f455f6e4",
+    "content-hash": "64abb9578dc6ceae1bdb6f6977cc729d",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -58,16 +58,16 @@
         },
         {
             "name": "paypayopa/php-sdk",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paypay/paypayopa-sdk-php.git",
-                "reference": "3522f7b90072cea1f23a9d688018c9b868aa559d"
+                "reference": "3cfcd87fb705dc0c5b52e29b8619a57b3fd55abc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paypay/paypayopa-sdk-php/zipball/3522f7b90072cea1f23a9d688018c9b868aa559d",
-                "reference": "3522f7b90072cea1f23a9d688018c9b868aa559d",
+                "url": "https://api.github.com/repos/paypay/paypayopa-sdk-php/zipball/3cfcd87fb705dc0c5b52e29b8619a57b3fd55abc",
+                "reference": "3cfcd87fb705dc0c5b52e29b8619a57b3fd55abc",
                 "shasum": ""
             },
             "require": {
@@ -76,6 +76,7 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.16",
+                "php-coveralls/php-coveralls": "^2.2",
                 "phpstan/phpstan": "^0.12.33",
                 "phpunit/phpunit": "^9"
             },
@@ -104,7 +105,7 @@
                 "qr",
                 "qrcode"
             ],
-            "time": "2020-08-12T07:09:12+00:00"
+            "time": "2020-08-25T07:53:43+00:00"
         }
     ],
     "packages-dev": [],
