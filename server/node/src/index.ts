@@ -1,15 +1,17 @@
 import express from "express";
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import { v4 as uuidv4 } from 'uuid';
 import PAYPAY from '@paypayopa/paypayopa-sdk-node';
 import * as cakes from './cakes.json';
 
-const app = express();
-const port = 8080;
+const port = 5000;
 
 const API_KEY = "api_key";
 const API_SECRET = "api_secret";
 const MERCHANT_ID = "merchant_id";
+
+const FRONTEND_PATH = "http://localhost:8080/orderpayment"
 
 PAYPAY.Configure({
     clientId: API_KEY,
@@ -18,7 +20,10 @@ PAYPAY.Configure({
     productionMode: false
 });
 
+const app = express();
+
 app.use(bodyParser.json())
+app.use(cors())
 
 app.get("/", (req, res) => {
     res.json({
@@ -27,21 +32,31 @@ app.get("/", (req, res) => {
 });
 
 app.get("/cakes", (req, res) => {
-    res.json(cakes);
+
+    const cakesList: any[] = [];
+
+    // tslint:disable-next-line: forin
+    for (const key in cakes) {
+        cakesList.push(cakes[key]);
+    }
+
+    res.json(cakesList);
 })
 
 app.post("/create-qr", (req, res) => {
 
+    const paymentId = uuidv4();
+
     const payload = {
-        merchantPaymentId: uuidv4(),
+        merchantPaymentId: paymentId,
         amount: req.body.amount,
         codeType: 'ORDER_QR',
         orderItems: req.body.orderItems,
-        redirectUrl: "redirect_url",
+        redirectUrl: FRONTEND_PATH + "/" + paymentId,
         redirectType: 'WEB_LINK',
     };
 
-    PAYPAY.QRCodeCreate(payload, (ppResonse:any) => {
+    PAYPAY.QRCodeCreate(payload, (ppResonse: any) => {
         res.json(ppResonse.BODY);
     });
 })
