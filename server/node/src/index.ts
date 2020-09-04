@@ -45,6 +45,7 @@ app.get("/cakes", (req, res) => {
 
 app.post("/create-qr", (req, res) => {
 
+    console.log(req.body.orderItems)
     const paymentId = uuidv4();
 
     const payload = {
@@ -57,14 +58,31 @@ app.post("/create-qr", (req, res) => {
     };
 
     PAYPAY.QRCodeCreate(payload, (ppResonse: any) => {
-        res.json(ppResonse.BODY);
+        console.log(ppResonse)
+        res.send(ppResonse.BODY);
     });
 })
 
-app.get("/order-status/:merchantId", (req, res) => {
-    res.send("Hello world?");
-});
+const sleep = (ms:any) => {
+    return new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
+};
 
+const getOrderStatus = async (merchantId:any) => {
+    await PAYPAY.GetPaymentDetails([merchantId], (response: any) => {
+        return response;
+    });
+}
+
+app.get("/order-status/:merchantId", async (req, res) => {
+
+    for (let i = 0; i < 10; i++) {
+        const res1:any =  await getOrderStatus(req.params.merchantId);
+        sleep(2000);
+    }
+    res.send({});
+});
 
 app.listen(port, () => {
     console.log(`server started at http://localhost:${port}`);
