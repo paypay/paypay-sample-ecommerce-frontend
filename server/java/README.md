@@ -6,8 +6,10 @@ It creates QR code link and checks the status of the payment.
 
 ### Configurations
 
-update the API Key and Secret with actual values in application.properties file
+update the API Key and Secret with actual values in application.properties file.
+Replace your front end url in the cors.urls property
 ```properties
+cors.urls=http://localhost:8080
 API_KEY=API_KEY
 API_SECRET=API_SECRET
 ```

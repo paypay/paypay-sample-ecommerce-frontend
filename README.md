@@ -45,6 +45,7 @@ yarn lint
 | SDK Language | README |
 | ------ | ------ |
 | Python | [Python SDK](server/python/README.md) |
+| Java   | [Java SDK](server/java/README.md) |
 
 License
 ----
