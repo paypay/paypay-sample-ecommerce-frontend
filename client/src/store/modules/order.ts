@@ -42,7 +42,7 @@ export const mutations: OrderMutation = {
 export const actions: OrderAction = {
     fetchOrderStatus({state, commit}, id) {
         getOrderStatus(id).then(res => {
-            if (res.statusText === "OK") {
+            if (res.statusText === "OK" || res.status == 200) {
                 commit('updateOrderStatus', {
                     amount: res.data.data.amount,
                     orderItems: res.data.data.orderItems,
