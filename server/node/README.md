@@ -7,6 +7,7 @@ This is a NodeJS based implementation of PayPay's SDK.
 ```sh
 $ cd server/node
 $ npm install
+$ npm build
 ```
 ### Add API Keys to the environment
 

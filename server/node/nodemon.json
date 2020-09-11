@@ -1,0 +1,10 @@
+{
+    "watch": ["src"], 
+    "exec": "npm run dev:start", 
+    "ext": "ts",
+    "env": {
+        "API_KEY": "your_api_key",
+        "API_SECRET": "your_api_secret",
+        "MERCHANT_ID": "your_merchant_id"
+    }
+}

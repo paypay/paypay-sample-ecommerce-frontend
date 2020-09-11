@@ -10,13 +10,13 @@
     "tsc": "tsc",
     "build": "npm-run-all clean lint tsc",
     "dev:start": "npm-run-all build start",
-    "dev": "nodemon --watch src -e ts -x npm run dev:start",
+    "dev": "nodemon",
     "start": "node ."
   },
   "author": "PayPay OPA SDK",
   "license": "Apache-2.0",
   "dependencies": {
-    "@paypayopa/paypayopa-sdk-node": "^0.4.1",
+    "@paypayopa/paypayopa-sdk-node": "^0.5.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
