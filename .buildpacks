@@ -1,0 +1,2 @@
+frontend=https://github.com/mars/create-react-app-buildpack.git
+api=https://github.com/heroku/heroku-buildpack-python
