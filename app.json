@@ -1,0 +1,24 @@
+{
+  "name": "paypay-sample-ecommerce-bk",
+  "description": "A functional E-Commerce site developed in VueJS to demonstrate PayPay's different language SDK's implementations\n\n",
+  "repository": "https://github.com/paypay/paypay-sample-ecommerce",
+  "keywords": ["node", "slack", "invite"],
+  "env": {
+    "API_KEY": {
+      "description": "PayPay API Key",
+      "value": ""
+    },
+    "API_SECRET": {
+      "description": "PayPay API Secret",
+      "value": ""
+    },
+    "REDIRECT_PATH": {
+      "description": "access token of slack, You can generate it in https://api.slack.com/web#auth",
+      "value": "https://{YOUR-APP}.herokuapp.com/orderpayment"
+    },
+    "API_ENPOINT": {
+      "description": "API Endpoint",
+      "value": "https://{YOUR-APP-API}.herokuapp.com"
+    }
+  }
+}
