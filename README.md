@@ -57,6 +57,8 @@ Apache 2.0
 
 Additionally to trying out this application locally, you can deploy it to a variety of host services. Here is a small selection of them.
 
+Note: Update .env file with the backend API endpoint
+
 | [Zeit](https://zeit.co/)                        | [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/paypay/paypay-sample-ecommerce/tree/master) |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Heroku](https://www.heroku.com/deploy/?template=https://github.com/paypay/paypay-sample-ecommerce/tree/master) | [![Deploy with Heroku](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy/?template=https://github.com/paypay/paypay-sample-ecommerce/tree/master)      |
