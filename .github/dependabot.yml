@@ -6,21 +6,6 @@
 version: 2
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/client" # Location of package manifests
-    schedule:
-      interval: "daily"
-  
-  - package-ecosystem: "pip" # See documentation for possible values
-    directory: "/server/python" # Location of package manifests
-    schedule:
-      interval: "daily"
-
-  - package-ecosystem: "composer" # See documentation for possible values
-    directory: "/server/php" # Location of package manifests
-    schedule:
-      interval: "daily"
-  
-  - package-ecosystem: "npm" # See documentation for possible values
-    directory: "/server/node" # Location of package manifests
+    directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
