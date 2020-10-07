@@ -1,7 +1,7 @@
 import {iItem} from "@/common/interface/item";
 import {RootState} from '@/store';
 import {ActionTree, GetterTree, MutationTree} from "vuex";
-import {makePayment,getOrderStatus} from "@/api/cakes";
+import {makePayment} from "@/api/cakes";
 
 
 export interface State {
