@@ -1,7 +1,7 @@
 import {iItem} from "@/common/interface/item";
 import {RootState} from '@/store';
 import {ActionTree, GetterTree, MutationTree} from "vuex";
-import {makePayment,getOrderStatus} from "@/api/cakes";
+import {makePayment} from "@/api/cakes";
 
 
 export interface State {
@@ -66,7 +66,7 @@ export const actions:CartAction = {
                 "currency": "JPY"
             }
         }).then(res=>{
-           if(res.statusText==="OK"){
+           if(res.statusText==="OK" || res.status == 200){
                location.href = res.data.data.url
            }
         })

@@ -1,6 +1,11 @@
 # PayPay Sample Web application
 
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b7323045ba9047e392d135a25cac0cf6)](https://app.codacy.com/gh/paypay/paypay-sample-ecommerce?utm_source=github.com&utm_medium=referral&utm_content=paypay/paypay-sample-ecommerce&utm_campaign=Badge_Grade_Dashboard)
 [![License](https://img.shields.io/:license-apache2.0-red.svg)](https://opensource.org/licenses/Apache-2.0)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpaypay%2Fpaypay-sample-ecommerce.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpaypay%2Fpaypay-sample-ecommerce?ref=badge_shield)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=paypay_paypay-sample-ecommerce&metric=alert_status)](https://sonarcloud.io/dashboard?id=paypay_paypay-sample-ecommerce)
+
 
 A simple and functional E-Commerce site developed in VueJS to demonstrate PayPay's different language SDK's implementations.
 
@@ -41,6 +46,7 @@ yarn lint
 | SDK Language | README |
 | ------ | ------ |
 | Python | [Python SDK](server/python/README.md) |
+| Java   | [Java SDK](server/java/README.md) |
 
 License
 ----
@@ -50,6 +56,8 @@ Apache 2.0
 ### Cloud deployment
 
 Additionally to trying out this application locally, you can deploy it to a variety of host services. Here is a small selection of them.
+
+Note: Update .env file with the backend API endpoint
 
 | [Zeit](https://zeit.co/)                        | [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/paypay/paypay-sample-ecommerce/tree/master) |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -72,3 +80,6 @@ License
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpaypay%2Fpaypay-sample-ecommerce.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpaypay%2Fpaypay-sample-ecommerce?ref=badge_large)

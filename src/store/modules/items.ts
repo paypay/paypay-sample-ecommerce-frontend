@@ -40,7 +40,7 @@ export const mutations: ItemMutation = {
 export const actions:CakeAction = {
     fetchCakes({commit}):any{
         getCakes().then((res)=>{
-            if(res.statusText === 'OK'){
+            if(res.statusText === 'OK' || res.status == 200){
                 commit('cakesLoaded', res.data);
             }else{
                 commit('cakesLoaded', []);

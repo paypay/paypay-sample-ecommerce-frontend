@@ -18,20 +18,6 @@
                             <img alt="Mississippi Mud Pie" src="@/assets/images/close_btn.png"/>
                         </div>
                     </div>
-                    <!--<div class="cart-contents">
-                        <div class="cart-image">
-                            <img
-                                    alt="Mississippi Mud Pie"
-                                    class="cart-image-content"
-                                    src="@/assets/images/redvelvet.png"
-                            />
-                        </div>
-                        <div class="cart-text">{{ $t("cake_shop.red_velvet") }}</div>
-                        <div class="cart-price">￥750.00</div>
-                        <div class="cart-close">
-                            <img alt="Red Velvet Cake" src="@/assets/images/close_btn.png"/>
-                        </div>
-                    </div>-->
                 </div>
                 <div class="order-description">
                     <div class="review-order">
@@ -41,16 +27,6 @@
                                 <p class="item-text">{{$t(item.title)}}</p>
                                 <p class="item-price">￥{{item.price.toFixed(2)}}</p>
                             </div>
-
-                            <!--:key="index" v-for="(item,index) in cartItems"-->
-                            <!--<div class="item-details">
-                                <p class="item-text">Mississippi Mud Pie</p>
-                                <p class="item-price">￥780.00</p>
-                            </div>
-                            <div class="item-details">
-                                <p class="item-text">Red Velvet Cake</p>
-                                <p class="item-price">￥750.00</p>
-                            </div>-->
                         </div>
                         <div class="order-total">
                             <div class="subtotal">
@@ -67,7 +43,6 @@
                             <p class="total-amount-price">￥{{getSum.toFixed(2)}}</p>
                         </div>
                     </div>
-<!--                    <router-link to="/orderpayment">-->
                         <div class="order-button" @click="this.handlePayment">
                             <button class="paypay-logo">
                                 <img alt="Paypay" src="@/assets/images/logo_paypay.svg"/>
@@ -76,7 +51,6 @@
                                 <span class="button-style">{{ $t("cake_shop.pay") }}</span>
                             </button>
                         </div>
-<!--                    </router-link>-->
                     <p class="paypay-click">{{ $t("cake_shop.pay_click") }}</p>
                 </div>
             </div>

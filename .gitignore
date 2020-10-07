@@ -1,2 +1,6 @@
 .DS_Store
-.idea
+.idea/
+server/php/vendor/*
+
+server/node/dist/
+node_modules/
