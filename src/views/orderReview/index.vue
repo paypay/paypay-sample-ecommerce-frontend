@@ -12,7 +12,7 @@
                                     :src="getImagePath(item.image)"
                             />
                         </div>
-                        <div class="cart-text">{{ $t(item.title) }}</div>
+                        <div class="cart-text" v-bind:title="$t(item.title)">{{ $t(item.title) }}</div>
                         <div class="cart-price">￥{{item.price}}</div>
                         <div class="cart-close" @click="removeFromCart(item.id)">
                             <img alt="Mississippi Mud Pie" src="@/assets/images/close_btn.png"/>
@@ -100,7 +100,10 @@
 
             .main-content {
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: space-between;
+                overflow: auto;
+                position: relative;
 
                 .shopping-cart {
                     .cart-heading {
@@ -113,7 +116,6 @@
 
                 .order-description {
                     .review-order {
-                        width: 420px;
                         border-radius: 16px;
                         background-color: $white;
                         box-shadow: 0 9px 46px 8px rgba(17, 22, 26, 0.08),
@@ -208,6 +210,7 @@
                     }
 
                     .order-button {
+                        //display: flex;
                         margin-top: 31px;
                         border-radius: 10px;
                         box-shadow: 0 9px 46px 8px rgba(17, 22, 26, 0.08),
@@ -250,38 +253,41 @@
 
         .cart-contents {
             display: flex;
+            align-items: center;
             padding-bottom: 30px;
             padding-top: 32px;
 
             .cart-image {
                 .cart-image-content {
-                    height: 100px;
-                    width: 120px;
+                    max-height: 100px;
+                    max-width: 120px;
+                    width: 100%;
+                    height: 100%;
                     border-radius: 8px;
                 }
             }
 
             .cart-text {
                 padding-left: 2%;
-                padding-top: 50px;
                 font-size: 20px;
                 font-weight: bold;
                 color: $black;
                 width: 40%;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
 
             .cart-price {
                 font-size: 20px;
                 font-weight: bold;
                 color: $red;
-                padding-top: 50px;
                 padding-left: 3%;
             }
 
             .cart-close {
                 padding-left: 10%;
-                padding-top: 50px;
                 cursor: pointer;
+                padding-top: 1%;
             }
         }
 
