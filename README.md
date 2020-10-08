@@ -45,8 +45,10 @@ yarn lint
 
 | SDK Language | README |
 | ------ | ------ |
-| Python | [Python SDK](server/python/README.md) |
-| Java   | [Java SDK](server/java/README.md) |
+| Python | [Python SDK](https://github.com/paypay/paypay-sample-ecommerce-backend-python/blob/master/README.md) |
+| Java   | [Java SDK](https://github.com/paypay/paypay-sample-ecommerce-backend-java/blob/master/README.md) |
+| Node   | [Node SDK](https://github.com/paypay/paypay-sample-ecommerce-backend-node/blob/master/README.md) |
+| PHP   | [PHP SDK](https://github.com/paypay/paypay-sample-ecommerce-backend-php/blob/master/README.md) |
 
 License
 ----
