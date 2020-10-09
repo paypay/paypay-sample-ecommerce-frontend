@@ -210,7 +210,6 @@
                     }
 
                     .order-button {
-                        //display: flex;
                         margin-top: 31px;
                         border-radius: 10px;
                         box-shadow: 0 9px 46px 8px rgba(17, 22, 26, 0.08),
