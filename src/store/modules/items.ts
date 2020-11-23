@@ -1,7 +1,7 @@
 import {iItem} from "@/common/interface/item";
 import {RootState} from '@/store';
 import {ActionTree, GetterTree, MutationTree} from "vuex";
-import {getCakes} from "@/api/cakes";
+import * as cakes from './cakes.json'
 
 
 export interface State {
@@ -38,15 +38,10 @@ export const mutations: ItemMutation = {
 
 
 export const actions:CakeAction = {
-    fetchCakes({commit}):any{
-        getCakes().then((res)=>{
-            if(res.statusText === 'OK' || res.status == 200){
-                commit('cakesLoaded', res.data);
-            }else{
-                commit('cakesLoaded', []);
-            }
-        })
-    }
+    fetchCakes({ commit }): any {
+        const myCakes: any = cakes
+        commit('cakesLoaded', myCakes.default)
+      },
 }
 
 
