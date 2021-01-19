@@ -17,7 +17,7 @@
     "vue": "^2.6.10",
     "vue-axios": "^3.2.2",
     "vue-class-component": "^7.2.6",
-    "vue-i18n": "^8.21.1",
+    "vue-i18n": "^8.22.4",
     "vue-property-decorator": "^9.0.2",
     "vue-router": "^3.4.5",
     "vuedraggable": "^2.23.2",
