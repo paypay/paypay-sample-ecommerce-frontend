@@ -33,7 +33,7 @@
     "@vue/cli-service": "^4.5.11",
 
     "@vue/eslint-config-typescript": "^4.0.0",
-    "eslint": "^7.18.0",
+    "eslint": "^7.19.0",
     "eslint-plugin-vue": "^7.5.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.0.1",
