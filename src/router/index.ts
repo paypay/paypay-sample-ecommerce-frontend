@@ -5,7 +5,7 @@ import OrderPayment from '../views/orderPayment/index.vue'
 import OrderReview from '../views/orderReview/index.vue'
 Vue.use(VueRouter)
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'dashboard',
