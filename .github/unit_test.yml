@@ -1,0 +1,20 @@
+name: Unit/Component Tests
+on: [pull_request]
+
+jobs:
+  test:
+    name: Running Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: egordm/gha-yarn-node-cache@v1
+
+      # Runs a single command using the runners shell
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Yarn installations
+        run: yarn install && npm run-script build
+      - name: Component Testing
+        run: npm run test:unit
