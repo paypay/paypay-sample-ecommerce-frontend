@@ -7,6 +7,8 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=paypay_paypay-sample-ecommerce&metric=alert_status)](https://sonarcloud.io/dashboard?id=paypay_paypay-sample-ecommerce)
 
 
+
+
 A simple and functional E-Commerce site developed in VueJS to demonstrate PayPay's different language SDK's implementations.
 
 Key features:
