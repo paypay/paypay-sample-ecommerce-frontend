@@ -1,11 +1,12 @@
 {
   "name": "PayPaySampleWebApp",
   "version": "0.1.0",
-  "author": "opensource@paypay-corp.co.jp",
   "private": false,
+  "author": "opensource@paypay-corp.co.jp",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -25,14 +26,16 @@
     "vuex-class": "^0.3.2"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.19",
     "@vue/cli-plugin-babel": "^4.5.11",
     "@vue/cli-plugin-eslint": "^4.5.11",
     "@vue/cli-plugin-router": "^4.5.11",
     "@vue/cli-plugin-typescript": "^4.5.11",
+    "@vue/cli-plugin-unit-jest": "^4.5.11",
     "@vue/cli-plugin-vuex": "^4.5.11",
     "@vue/cli-service": "^4.5.11",
-
     "@vue/eslint-config-typescript": "^4.0.0",
+    "@vue/test-utils": "^1.0.3",
     "eslint": "^7.21.0",
     "eslint-plugin-vue": "^7.7.0",
     "node-sass": "^5.0.0",
@@ -55,7 +58,19 @@
     },
     "parserOptions": {
       "parser": "@typescript-eslint/parser"
-    }
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/*/*.spec.{j,t}s?(x)",
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
   },
   "browserslist": [
     "> 1%",

@@ -21,9 +21,7 @@ import { Component, Vue } from "vue-property-decorator";
 import {Getter, namespace} from "vuex-class";
 import {iItem} from "@/common/interface/item";
 const CartGetter = namespace('cart', Getter)
-@Component({
-  components: {}
-})
+@Component
 export default class Header extends Vue {
   @CartGetter cartItems!: iItem[]
 }
