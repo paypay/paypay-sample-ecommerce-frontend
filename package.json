@@ -36,7 +36,7 @@
     "@vue/cli-service": "^4.5.11",
     "@vue/eslint-config-typescript": "^4.0.0",
     "@vue/test-utils": "^1.0.3",
-    "eslint": "^7.21.0",
+    "eslint": "^7.22.0",
     "eslint-plugin-vue": "^7.7.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.0.1",
