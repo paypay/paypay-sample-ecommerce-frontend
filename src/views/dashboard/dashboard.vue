@@ -34,11 +34,9 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Header from "@/components/dashboard/header.vue";
-import Footer from "@/components/dashboard/footer.vue";
 import Item from "@/components/item/index.vue";
 
-import { Getter, namespace, Action } from "vuex-class";
+import { namespace } from "vuex-class";
 import { iItem } from "@/common/interface/item";
 
 const ItemModule = namespace("items");

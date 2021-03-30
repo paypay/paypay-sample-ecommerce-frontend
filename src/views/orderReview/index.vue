@@ -73,9 +73,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-// import Header from "@/components/dashboard/header.vue";
-// import Footer from "@/components/dashboard/footer.vue";
-import { Getter, namespace, Mutation } from "vuex-class";
+import { namespace } from "vuex-class";
 import { iItem } from "@/common/interface/item";
 
 const CartModule = namespace("cart");
