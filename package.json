@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "core-js": "^3.11.1",
+    "core-js": "^3.12.1",
     "date-fns": "^2.21.3",
     "element-ui": "^2.15.1",
     "uuid": "^8.3.2",
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@types/jest": "^26.0.23",
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
     "@typescript-eslint/parser": "^4.22.0",
     "@vue/cli-plugin-babel": "^4.5.12",
     "@vue/cli-plugin-eslint": "^4.5.12",
